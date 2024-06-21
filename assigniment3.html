@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assigniment-3</title>
+    </head>
+    <body>
+        <script>
+            let num1=3//window.prompt("enter num1:");
+            let num2=4//window.prompt("enter num2:");
+            if(num1>num2){
+                console.log("num1 is greater");
+            }
+            else{
+                console.log("num2 is greater");
+            }
+            let num3=5;
+            for(let i=1;i<=num3;i++){
+                console.log("for loop iteration "+i);
+            }
+            var i=1;
+            while(i<=num3){
+                console.log("while loop iteration "+i);
+                i++;
+            }
+            var i=1;
+            do{
+                console.log(" do while loop iteration "+i);
+                i++;
+            }while(i<=num3);
+            let day;
+            switch(new Date().getDay()){
+            case 0:
+                day='sunday';
+                break;
+            case 1:
+                day="monday";
+                break;
+            case 2:
+                day="tuesday";
+                break;
+            case 3:
+                day="wednesday";
+                break;
+            case 4:
+                day="thursady";
+                break;
+            case 5:
+                day="friday";
+                break;
+            case 6:
+                day="saturday";
+                break;
+            default:
+                day="invalid";
+            }
+            console.log(day);
+            //2 question
+            let a=[1,2,3,4,5];
+            console.log("joined string: "+ a.join(", "));
+            let arr=[];
+            arr.push(1);
+            arr.push(2);
+            arr.push(3);
+            arr.push(4);
+            arr.push(5);
+            arr.push(6);
+            arr.push(7);
+            console.log("After push: ",arr);
+            arr.pop();
+            console.log("After pop: ",arr);
+            arr.shift();
+            console.log("After shift ",arr);
+            arr.unshift(0);
+            console.log("After unshift ",arr);
+            let a1=arr.slice(1,5);
+            console.log("Sliced array: ",a1);
+            arr.splice(1,0,4,7);
+            console.log("After splice: ",arr);
+            console.log("index of 5: ",arr.indexOf(5));
+            console.log("3 exists in array: ",arr.includes(3));
+            console.log(arr.reverse());
+            let st="This is Awesome!";
+            console.log(st.toUpperCase());
+            console.log(st.toLowerCase());
+            console.log("length of String: ",st.length);
+            console.log("index of is :",st.indexOf("is"));
+            console.log("replace string: ",st.replace("Awesome","Amazing"));
+            console.log("Split: ",st.split(" "));
+            //3 question
+            function greetAlice(){
+                console.log("hello, Alice");
+            }
+            greetAlice();
+            const greetBob=function(){
+                console.log("hello, bob");
+            }
+            greetBob();
+            const greetcharlie=()=>{
+                console.log("Hello, charlie");
+            }
+            greetcharlie();
+            const greetDave=new Function(`console.log("hello,Dave");`);
+            greetDave();
+            (function(){
+                console.log("hello ,eve");
+            })();
+            function* greetworld(){
+                yield console.log("hello, world");
+            }
+            const gen=greetworld();
+            gen.next();
+            function greetFrank(){
+                return function(){
+                    console.log("hey, Frank");
+                };
+            }
+            const frank=greetFrank();
+            frank();
+            const greeter={
+                greetgrace(){
+                    console.log("hello ,grace");
+                }
+            };
+            greeter.greetgrace();
+            //6 question
+            let variable = "I can be reassigned";
+            const constant = "I cannot be reassigned";
+
+            variable = "New value"; //
+            console.log(variable);
+            //arrow
+            const add = (a, b) => a + b;
+            console.log(add(2, 3));
+            //Template Literals
+            const name = "Alice";
+            const greeting = `Hello, ${name}!`;
+            console.log(greeting);
+            //Default Parameters
+            function greet(name = "Stranger") {
+                 return `Hello, ${name}!`;
+            }
+            console.log(greet()); // Hello, Stranger!
+            console.log(greet("Alice")); // Hello, Alice!
+            //Destructiong Assigniment
+            const person = { name: "Bob", age: 30 };
+            const { name1, age } = person;
+            console.log(name1, age);
+            //rest and spread
+            function sum(...numbers) {
+                return numbers.reduce((total, num) => total + num);
+            }
+            console.log(sum(1, 2, 3));
+            //Enhnaced object literals
+            const name2 = "Alice";
+            const age1 = 25;
+
+            const person1 = {
+                name2,
+                age1,
+            greet() {
+                console.log(`Hello, I'm ${this.name}`);
+                }
+            };
+            person1.greet(); 
+            //classes
+            class Animal {
+                constructor(name) {
+                    this.name = name;
+                }
+                speak() {
+                    console.log(`${this.name} makes a noise.`);
+                }
+            }
+            class Dog extends Animal {
+                speak() {
+                console.log(`${this.name} barks.`);
+                }   
+            }
+            const dog = new Dog('Rex');
+            dog.speak(); 
+            //promises
+            const fetch=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("Data fetched");
+                },2000);
+            });
+            fetch.then(data=>console.log(data));
+
+            //symbols
+            const sym1 = Symbol('description');
+            const sym2 = Symbol('description');
+            console.log(sym1 === sym2);
+            //map
+            const map = new Map();
+            map.set('a', 1);
+            map.set('b', 2);
+            console.log(map.get('a')); 
+            console.log(map.size);
+            //set
+            const set = new Set();
+            set.add(1);
+            set.add(2);
+            set.add(1); // duplicate, won't be added
+            console.log(set.has(1));
+            console.log(set.size);
+            //iterators and generators
+            const iterable = [1, 2, 3];
+            const iterator = iterable[Symbol.iterator]();
+            console.log(iterator.next()); // { value: 1, done: false }
+            console.log(iterator.next()); // { value: 2, done: false }
+            console.log(iterator.next()); // { value: 3, done: false }
+            console.log(iterator.next());
+            //generator
+            function* generator() {
+                yield 1;
+                yield 2;
+                yield 3;
+            }
+            const ge = generator();
+            console.log(ge.next().value); // 1
+            console.log(ge.next().value); // 2
+            console.log(ge.next().value);
+        </script>
+    </body>
+</html>

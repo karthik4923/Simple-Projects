@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body{
+                font-family: 'Courier New', Courier, monospace;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            p{
+                font-size:50px;
+            }
+            .timer{
+                font-size: 48px;
+            }
+            button{
+                font-size: 16px;
+                margin:16px;
+                padding: 10px 20px;
+                color:black;
+                border-radius: 20px;
+                background-color:rgb(255, 163, 163);
+                box-shadow: 2px 2px black;
+            }
+            .dec{
+                background-color: beige;
+                border: 2px solid black;
+                border-radius: 50%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                padding: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>POMODORO</p>
+        <div class="dec">
+            <div class="timer" id="timer">25:00</div>
+            <button onclick="reset()">Reset</button>
+            <button onclick="start()">Start</button>
+            <button onclick="stop()">Stop</button>
+        </div>
+        
+        <script>
+            let timer;
+            let minutes=25;
+            let seconds=0;
+            let isrun=false;
+            const timerele=document.getElementById('timer');
+            function updatetimer(){
+                timerele.textContent=`${minutes<10?'0':''}${minutes}:${seconds<10?'0':''}${seconds}`;
+            }
+            function start(){
+                //if(isrun===true) return;
+                isrun=true;
+                timer=setInterval(()=>{
+                    if(seconds===0){
+                        if(minutes===0){
+                            clearInterval(timer);
+                            isrun=false;
+                            alert("pomodoro session is completed");
+                            return;
+                        }
+                        minutes--;
+                        seconds=59;
+                    }else{
+                        seconds--;
+                    }
+                    updatetimer();
+                },1000);
+            }
+            function stop(){
+                clearInterval(timer);
+                isrun=false;
+            }
+            function reset(){
+                clearInterval(timer);
+                isrun=false;
+                minutes=25;
+                seconds=0;
+                updatetimer();
+            }
+            updatetimer();
+        </script>
+
+    </body>
+</html>

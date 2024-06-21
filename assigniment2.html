@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assigniment</title>
+        <style>
+            .intro{
+                font-weight: bold;
+    
+            }
+            #mypara{
+                font-style: italic;
+            }
+            .list li:nth-child(odd){
+                background-color: rgb(187, 181, 181);
+
+            }
+            #a{
+                background-color: yellow;
+            }
+            #b{
+                background-image:url(a1.jpg);
+            }
+            #d{
+                background-image:url(a3.jpg);
+                background-repeat: repeat-x;
+            }
+            #c{
+                background:linear-gradient(to left, yellow,red);
+            }
+            #f{
+                background-image: url(a3.jpg);
+                background-position:50%;
+            }
+            .k{
+                
+                box-shadow: 1px 1px 4px black ;
+                margin:10px;
+                padding-left:20px;
+                font-weight: lighter;
+            }
+            .flex_container{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            .flex_container > div{
+                background-color:rgb(200, 204, 204) ;
+                width:500px;
+                height:200px;
+                margin:40px;
+                padding:20px;
+                text-align: center;
+            }
+            .i1{
+                grid-area: header;
+            }
+            .i2{
+                grid-area: menu;
+            }
+            .i3{
+                grid-area: main;
+            }
+            .i4{
+                grid-area: right;
+            }
+            .i5{
+                grid-area: footer;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-areas:
+                  'header header header header header'
+                  'menu main main main right'
+                  'menu footer footer  footer right'
+                  'menu footer footer footer right';
+                gap: 10px;
+                background-color: blue;
+                padding:10px;
+
+
+            }
+            .grid-container > div{
+                background-color: rgb(117, 203, 203);
+                text-align: center;
+                padding:20px;
+                font-size: 30px;
+                
+            }
+            .ani{
+                animation: demo 3s linear forwards;
+                color:red;
+                position: relative;
+            
+                font-size: 20px;
+            }
+            @keyframes demo{
+                to{
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    left:300px;
+                    color:aqua;
+                    font-size: 40px;
+                }
+
+            }
+
+            
+    
+        </style>
+    </head>
+    <body>
+        <h1 style="color: blue;">This is heading</h1>
+        <p class="intro">This is a paragraph with the class "intro"</p>
+        <p id="mypara">This is a paragraph with the id "my-para"</p>
+        <ul class="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul><hr>
+        <p id="a">background Color</p>
+        <p id="b">background Image</p>
+        <p id="c">background Gradient</p>
+        <p id="d">background Repeat</p>
+        <p id="f">background position</p>
+        <div class="k">
+            <p style="text-decoration: underline;font-size:20px;font-weight:bold;">Intoduction to class</p>
+            <p>Instructor: karthik</p>
+            <p>Duration: 4 weeks</p>
+            <p>Level: Beginner</p>
+            <p>This course provides an introduction to css,covering basic syntax, selectors, and styling properties.</p>
+        </div><hr>
+        <div class="flex_container">
+            <div class="fle1">
+                <h2>HTML</h2>
+                <p>HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page. HTML consists of a series of elements. HTML elements tell the browser how to display the content.</p>
+            </div>
+            <div class="fle1">
+                <h2>CSS</h2>
+                <p>CSS stands for Cascading Style Sheets, and it's used to add style to a web page by dictating how a site is displayed on a browser.</p>
+            </div>
+            <div class="fle1">
+                <h2>Javascript</h2>
+                <p>JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more. It allows you to implement dynamic features on web pages that cannot be done with only HTML and CSS.</p>
+            </div>
+            <div class="fle1">
+                <h2>Bootstrap</h2>
+                <p>Bootstrap is a free front-end framework for faster and easier web development. Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins.</p>
+            </div>
+        </div><hr>
+        <div class="grid-container">
+            <div class="i1">Header</div>
+            <div class="i2">Menu</div>
+            <div class="i3">Main</div>
+            <div class="i4">Right</div>
+            <div class="i5">Footer</div>
+        </div><hr>
+        <p class="ani">welcome</p>
+    </body>
+</html>

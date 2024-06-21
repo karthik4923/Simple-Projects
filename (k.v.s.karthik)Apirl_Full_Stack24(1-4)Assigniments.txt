@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Assignments</title>
+    </head>
+    <body>
+        <h1>Welcome to my website?</h1>
+        <p>This is the home page of my website</p>
+        <h1>About me</h1>
+        <p>My name is k.v.s.Karthik and I'm a Web Developer</p><br>
+        <ol>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ol>
+
+        <p>Row1,Column1 Row1,Column2</p>
+        <p>Row2,Column1 Row2,Column2</p>
+        <form action="e1.html">
+            <h1>Contact me</h1>
+            <label>Name:</label>
+            <input type="text" placeholder="UserName" minlength="5" maxlength="20" required><br>
+            <label>Email:</label>
+            <input type="email" placeholder="@gmail.com" value=""><br>
+            <label>Message:</label>
+            <textarea></textarea><br>
+            <input type="submit" value="send"></button>
+        </form>
+        <p>Write some content here</p>
+        <p>Write some more content here</p>
+        <hr>
+        <h1>Text Formatting Example</h1>
+        <p>This is <b>important</b> text</p>
+        <p>This is <i>emphasized</i> text</p>
+        <p>This is <u>underlined</u> text</p>
+        <p>This is <del>strikethrough</del> text</p>
+        <p>This is <sup>superscript</sup> and this is <sub>subscript</sub> text</p>
+        <p>These Tags will be used to make a <b>bold</b>,<i>italic</i>, and <u>underline</u> styles.</p>
+        <pre>   This is preformatted text.</pre>
+        <pre>   It preserves white space and line breaks.</pre>
+        <p>This is blockquote<blockquote>can be used to indicate a long quotation that is set off from the main text.</blockquote> </p>
+        <p>Superscript text appears half a character above the normal line, and is sometimes rendered in smaller 
+            <sup>font</sup> superscript text can be used for footnotes like wwww</p>
+        <hr>
+        <form method="post">
+            <label for="name">Username:</label>
+            <input type="text" id="name" placeholder="Enter your name" minlength="5" maxlength="20" autocomplete="on" required><br>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" placeholder="Enter your password"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your Eamil"><br>
+            <label for="age">Age:</label>
+            <input type="number" placeholder="age" id="age" style="width: 40px;"><br>
+            <label>Rating:</label>
+            <input type="range"><br>
+            <label>Date Of Birth</label>
+            <input type="date"><br>
+            <label>Time:</label>
+            <input type="time"><br>
+            <label>Week:</label>
+            <input type="week"><br>
+            <label>Month:</label>
+            <input type="month"><br>
+            <label>URL:</label>
+            <input type="url"><br>
+            <label>Search:</label>
+            <input type="search"><br>
+            <input type="image" src="C:\Users\hp\Desktop\files\HTML PRACTISE\a1.jpg" style="width: 100px; height: 100px;"><br>
+            <label>Gender:</label>
+            <input type="radio" name="gen">
+            <label>Male</label>
+            <input type="radio" name="gen">
+            <label>Female</label>
+            <input type="radio" name="gen">
+            <label>Other</label><br>
+            <label>Intersets:</label>
+            <input type="checkbox">
+            <label>Reading</label>
+            <input type="checkbox">
+            <label>Sports</label>
+            <input type="checkbox">
+            <label>Ciruculam Activities</label><br>
+            <label></label></p>
+            <label for="upload">Upload:</label>
+            <input type="file" id="upload" multiple><br>
+            <label>Country:</label>
+                <select>
+                    <option>India</option>
+                    <option>America</option>
+                    <option>Japan</option>
+                    <option>China</option>
+                    <option>Africa</option>
+                </select><br>
+            <label>Message:</label>
+            <textarea rows="3" cols="25" placeholder="Enter Message"></textarea><br>
+            <input type="submit">
+        </form>
+        <hr>
+        <h1>video</h1>
+        <video autoplay loop muted controls style="width: 300px; height: 200px;">
+            <source src="C:\Users\hp\Desktop\files\HTML PRACTISE\chef.mp4" type="video/mp4">
+        </video>
+        <h1>Iframe</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CS7hBHVGWs0?si=nP4gZPv6iiQcTYWh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h1>Image</h1>
+        <img src="C:\Users\hp\Desktop\files\HTML PRACTISE\a1.jpg" style="width: 350px; height: 200px;">
+        <h1>Audio</h1>
+        <audio controls>
+            <source src="C:\Users\hp\Desktop\files\HTML PRACTISE\Krishna-Trance(PaglaSongs).mp3" allow="autoplay" type="audio/mpeg">
+        </audio>
+        <hr>
+    </body>
+</html>
